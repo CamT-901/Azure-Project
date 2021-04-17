@@ -1,3 +1,4 @@
+#install docker and container
 #!/bin/bash
 
 #Updating
