@@ -1,3 +1,4 @@
+#forward logs and files to ELK server
 #!/bin/bash
 if ! [ $(id -u) = 0 ]; then
    echo "The script need to be run as root." >&2
