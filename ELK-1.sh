@@ -1,4 +1,4 @@
-#install docker and container
+#install on ELK server: docker
 #!/bin/bash
 
 #Updating
