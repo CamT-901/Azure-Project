@@ -9,13 +9,15 @@ if [ $SUDO_USER ]; then
 else
 	real_user=$(whoami)
 fi
-apt-get update
-apt-get upggrade
-apt install docker.io
-apt install python3-pip
-apt install docker
-systemctl start docker
-docker pull vulnerables/web-dvwa
-docker run -it -p 80:80 --restart always vulnerables/web-dvwa
-sudo systemctl enable docker.service
-sudo systemctl enable containerd.service
+apt-get update && apt-get upggrade
+
+apt install docker.io &&
+apt install python3-pip &&
+apt install docker &&
+docker pull vulnerables/web-dvwa &&
+systemctl start docker &&
+docker run -it -p 80:80 --restart always vulnerables/web-dvwa &&
+exit
+#Run the last two commands
+#sudo systemctl enable docker.service
+#sudo systemctl enable containerd.service
