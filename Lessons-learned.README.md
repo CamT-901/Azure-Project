@@ -1,0 +1,12 @@
+# Azure-Project
+Creating network that contains servers, NSG's, resource groups, virtual machines(ubuntu), Load Balancer, a v-net, subnet, & jumpbox
+
+04/2021
+Azure Project 
+Cameron Todd
+
+This Azure project has taught me how to build, deploy, secure, and manage environments within Azure. Learning how to create and form resource groups to logically organize all objects for organizational clarity was the first step in forming the network. The objects in the group varied from endpoints to web facing, which needed network security group rules setup to restricted and/or allow the proper people access. I was able to create firsthand in an Azure environment how to properly set up networking rules and test each rule for accuracy and efficiency (did the rule do what it was intended to do?) I created a range of network rules that would allow for the use of SSH from the Jumpbox to multiple servers, allow web servers to connect to ports 80 and 443, open specific dynamic ports and implicitly deny traffic the ability to enter the network if there was no specific rule that allows it. I was also able to configure a load balancer (layer 4), add servers to the backend pools, create a health probe and load balancing rules to make sure that only “healthy” instances received new traffic.
+
+From there I was also able to create a subnet in my existing virtual network and associate the new network security group to that subnet. Once the network was setup and the rules were verified through testing, I began to create access to outside testing and logging environments. After SSH’ing from my jumpbox to my webservers I ran the DVWA.sh on both web servers. Hopping back to the jumpbox to ssh into my ELK server, I ran the elk.sh to install docker. Then back to the web servers to run filebeat.sh to enable filebeat. This allowed me to forward logs and files and use Kibana to visualize the data.
+
+The first few days of creating resources groups and instances were frustrating because I could not get the network to operate correctly, constant error messages. After many days and hours, a lot of trial and error, I can confidently troubleshoot a number of issues; networking, availability zones, region pairs, template building for consistent deployment, deconstructing a machine for deprovisioning and more. I feel confident that I can build and rebuild an azure network so that is secure and will function as it is intended to function.
