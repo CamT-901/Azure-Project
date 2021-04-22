@@ -1,9 +1,6 @@
-# Azure-Project
-Creating network that contains servers, NSG's, resource groups, virtual machines(ubuntu), Load Balancer, a v-net, subnet, & jumpbox
-
 04/2021
 Azure Project 
-Cameron Todd
+
 
 This Azure project has taught me how to build, deploy, secure, and manage environments within Azure. Learning how to create and form resource groups to logically organize all objects for organizational clarity was the first step in forming the network. The objects in the group varied from endpoints to web facing, which needed network security group rules setup to restricted and/or allow the proper people access. I was able to create firsthand in an Azure environment how to properly set up networking rules and test each rule for accuracy and efficiency (did the rule do what it was intended to do?) I created a range of network rules that would allow for the use of SSH from the Jumpbox to multiple servers, allow web servers to connect to ports 80 and 443, open specific dynamic ports and implicitly deny traffic the ability to enter the network if there was no specific rule that allows it. I was also able to configure a load balancer (layer 4), add servers to the backend pools, create a health probe and load balancing rules to make sure that only “healthy” instances received new traffic.
 
